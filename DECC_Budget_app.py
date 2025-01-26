@@ -21,7 +21,7 @@ def main():
 
     # Home Section
     if selected_section == "Home":
-        st.subheader("Home")
+        st.subheader("Overview")
         st.write("""
         This app helps you understand your international finances at a glance:
         - View account balances across all accounts.
