@@ -1,16 +1,16 @@
 import streamlit as st
 
 # Configure the Streamlit app
-st.set_page_config(page_title="Lifestyle Budget Optimizer", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="DECC Personal Financial Intelligence web app", layout="wide", initial_sidebar_state="expanded")
 
 def main():
     # Title and Introduction
-    st.title("Lifestyle Budget Optimizer")
+    st.title("Financial Intelligence web app")
     st.markdown("""
-    Welcome to the Lifestyle Budget Optimizer! This app is designed to help military personnel, students, and professionals living in Europe manage their finances effectively by:
-    - Predicting upcoming withdrawals like rent or tuition.
-    - Providing alerts for deposits to maintain balances.
-    - Identifying savings opportunities based on your spending patterns.
+    Welcome to your personal financial intelligence web app! This app is designed to help military personnel, students, and professionals living in Europe manage their finances effectively by:
+    - Predicting upcoming withdrawals like rent, utilities, or subscriptions.
+    - Providing alerts for deposits to maintain balances multiple accounts.
+    - Identifying savings opportunities based on your international spending patterns.
     """)
 
     # Sidebar for Navigation
@@ -24,7 +24,7 @@ def main():
         st.subheader("Overview")
         st.write("""
         This app helps you understand your finances at a glance:
-        - View predicted upcoming withdrawals.
+        - View account balances across all accounts.
         - Analyze your spending patterns to uncover savings opportunities.
         - Chat with our AI to get personalized financial insights.
         """)
@@ -58,6 +58,7 @@ def main():
         st.subheader("Chatbot Insights")
         st.markdown("""
         Ask our AI chatbot for personalized financial advice:
+        - Help me create a buget for my house in the US and Germany 
         - How much should I save for my next move?
         - What is the best way to budget for tuition?
         - How can I reduce my utility bills?
@@ -74,8 +75,8 @@ def main():
 
     # Footer
     st.markdown("---")
-    st.markdown("For support or feedback, contact us at [support@budgetoptimizer.com](mailto:support@budgetoptimizer.com).")
-    st.markdown("© 2025 Lifestyle Budget Optimizer | Your trusted financial companion.")
+    st.markdown("For support or feedback, contact us at [https://www.defcomcap.com](https://www.defcomcap.com).")
+    st.markdown("© 2025 DECC | Your trusted financial companion.")
 
 if __name__ == "__main__":
     main()
