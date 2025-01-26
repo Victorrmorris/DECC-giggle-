@@ -64,7 +64,7 @@ def main():
         """)
         st.success("Tip: Use this section to identify where you can cut costs and save more annually.")
 
-    # Budget Visualization Section
+   # Budget Visualization Section
 elif selected_section == "Budget Visualization":
     st.subheader("Germany and US Household Budgeting")
 
@@ -72,6 +72,15 @@ elif selected_section == "Budget Visualization":
     categories = ["Groceries", "Rent", "Entertainment", "Utilities", "Transportation"]
     amounts = [1200, 2500, 600, 400, 300]  # Example spending amounts
     total_budget = 6000  # Example total budget
+
+    # Display total spending
+    total_spent = sum(amounts)
+    st.write(f"**Total Spent:** ${total_spent:,.2f}")
+
+    # Display individual category spending with progress bars
+    for category, amount in zip(categories, amounts):
+        st.write(f"{category}: ${amount:,.2f} spent out of ${total_budget}")
+        st.progress(amount / total_budget)
 
     # Display total spending
     total_spent = sum(amounts)
