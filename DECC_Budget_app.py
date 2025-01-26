@@ -66,7 +66,7 @@ def main():
 
    # Budget Visualization Section
     elif selected_section == "Budget Visualization":
-    st.subheader("Germany and US Household Budgeting")
+        st.subheader("Germany and US Household Budgeting")
 
     # Budget data
     categories = ["Groceries", "Rent", "Entertainment", "Utilities", "Transportation"]
