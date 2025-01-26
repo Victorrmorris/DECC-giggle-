@@ -16,34 +16,34 @@ def main():
     # Sidebar for Navigation
     st.sidebar.header("Navigation")
     st.sidebar.markdown("Select a section to explore:")
-    sections = ["Overview", "Upcoming Withdrawals", "Savings Opportunities", "Chatbot Insights"]
+    sections = ["Home", "Recurring Payments", "Spending Analytics", "Personal Finance Insights"]
     selected_section = st.sidebar.radio("Go to:", sections, index=0)
 
-    # Overview Section
-    if selected_section == "Overview":
-        st.subheader("Overview")
+    # Home Section
+    if selected_section == "Home":
+        st.subheader("Home")
         st.write("""
-        This app helps you understand your finances at a glance:
+        This app helps you understand your international finances at a glance:
         - View account balances across all accounts.
         - Analyze your spending patterns to uncover savings opportunities.
         - Chat with our AI to get personalized financial insights.
         """)
 
-    # Upcoming Withdrawals Section
-    elif selected_section == "Upcoming Withdrawals":
-        st.subheader("Upcoming Withdrawals")
+    # Recurring Payments Section
+    elif selected_section == "Recurring Payments":
+        st.subheader("Recurring Payments")
         st.markdown("""
-        Stay on top of your recurring expenses! Here are some examples of upcoming withdrawals you might need to plan for:
+        Stay on top of your recurring payments! Here are some examples of upcoming withdrawals you might need to plan for:
         - **Rent:** Due on the 1st of the month.
         - **Tuition:** Semester-based payments.
-        - **Utilities:** Monthly payments for electricity, water, and internet.
+        - **Utilities:** Monthly payments for electricity, water, and internet. 
         """)
 
-        st.warning("Ensure you have sufficient funds in your account to cover these expenses.")
+        st.warning("Ensure you have sufficient funds in your USAA checking and local German account to cover these expenses since that is where they are automatically paid.")
 
-    # Savings Opportunities Section
-    elif selected_section == "Savings Opportunities":
-        st.subheader("Savings Opportunities")
+    # Spending Analytics Section
+    elif selected_section == "Spending Analytics":
+        st.subheader("Spending Analytics")
         st.markdown("""
         Based on your spending patterns, here are potential areas to save:
         - Reduce discretionary spending (e.g., dining out, entertainment).
@@ -53,15 +53,15 @@ def main():
 
         st.success("Tip: Use this section to identify where you can cut costs and save more annually.")
 
-    # Chatbot Insights Section
-    elif selected_section == "Chatbot Insights":
-        st.subheader("Chatbot Insights")
+    # Personal Finance Insights Section
+    elif selected_section == "Personal Finance Insights":
+        st.subheader("Personal Finance Insights")
         st.markdown("""
-        Ask our AI chatbot for personalized financial advice:
+        Get personalized financial advice:
         - Help me create a buget for my house in the US and Germany 
-        - How much should I save for my next move?
-        - What is the best way to budget for tuition?
-        - How can I reduce my utility bills?
+        - How much should I save for my move from Germany to Texas?
+        - What is the best way to budget for tuition not covered by my post 9-11 GI Bill?
+        - How can I reduce my utility bills when deployed or away from home for over two weeks?
         """)
 
         # Large chatbot UI
@@ -76,7 +76,7 @@ def main():
     # Footer
     st.markdown("---")
     st.markdown("For support or feedback, contact us at [https://www.defcomcap.com](https://www.defcomcap.com).")
-    st.markdown("© 2025 DECC | Your trusted financial companion.")
+    st.markdown("© 2025 DECC | Personal financial intelligence.")
 
 if __name__ == "__main__":
     main()
