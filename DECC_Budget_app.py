@@ -1,4 +1,5 @@
 import streamlit as st
+import matplotlib.pyplot as plt
 
 # Configure the Streamlit app
 st.set_page_config(page_title="Lifestyle Budget Optimizer", layout="wide", initial_sidebar_state="expanded")
@@ -31,6 +32,8 @@ if selected_section == "Overview":
 # Upcoming Withdrawals Section
 elif selected_section == "Upcoming Withdrawals":
     st.subheader("Upcoming Withdrawals")
+
+    # Visualize upcoming withdrawals
     st.markdown("### My Bills (All Linked Accounts)")
     col1, col2, col3 = st.columns(3)
     col1.metric("Outstanding", "$0")
@@ -43,6 +46,7 @@ elif selected_section == "Upcoming Withdrawals":
     st.write("**REWAG · Utilities**: $30.00 Monthly")
 
     st.markdown("[View more](#)")
+
     st.warning("Ensure you have sufficient funds in your account to cover these expenses.")
 
 # Savings Opportunities Section
@@ -54,18 +58,23 @@ elif selected_section == "Savings Opportunities":
     - Set a monthly savings goal and automate transfers.
     - Take advantage of lower-cost alternatives for recurring expenses.
     """)
+
     st.success("Tip: Use this section to identify where you can cut costs and save more annually.")
 
 # Budget Visualization Section
 elif selected_section == "Budget Visualization":
     st.subheader("Germany and US Household Budgeting")
-    categories = ["Groceries", "Rent", "Entertainment", "Utilities", "Transportation"]
-    amounts = [1200, 2500, 600, 400, 300]
-    total_budget = 6000
 
+    # Budget data
+    categories = ["Groceries", "Rent", "Entertainment", "Utilities", "Transportation"]
+    amounts = [1200, 2500, 600, 400, 300]  # Example spending amounts
+    total_budget = 6000  # Example total budget
+
+    # Display total spending
     total_spent = sum(amounts)
     st.write(f"**Total Spent:** ${total_spent:,.2f}")
 
+    # Display individual category spending with progress bars
     for category, amount in zip(categories, amounts):
         st.write(f"{category}: ${amount:,.2f} spent out of ${total_budget}")
         st.progress(amount / total_budget)
@@ -80,14 +89,16 @@ elif selected_section == "Chatbot Insights":
     - How can I reduce my utility bills?
     """)
 
-    user_input = st.text_area("Type your question here:", height=200, placeholder="Ask about your finances...")
+    # Large chatbot UI
+    user_input = st.text_area("Type your question here:", height=200, placeholder="Ask about your finances, budgeting, or savings opportunities...")
     if st.button("Get Insights"):
+        # Placeholder for chatbot integration: Replace this with API/model integration if available.
         if user_input.strip():
-            st.write(f"AI Response for: '{user_input}'")
+            st.write(f"AI Response for: '{user_input}'")  # Placeholder for chatbot response
         else:
             st.warning("Please enter a question to get insights.")
 
 # Footer
 st.markdown("---")
-st.markdown("For support, contact us at [support@budgetoptimizer.com](mailto:support@budgetoptimizer.com).")
-st.markdown("© 2025 Lifestyle Budget Optimizer.")
+st.markdown("For support or feedback, contact us at [support@budgetoptimizer.com](mailto:support@budgetoptimizer.com).")
+st.markdown("© 2025 Lifestyle Budget Optimizer | Your trusted financial companion.")
