@@ -6,11 +6,11 @@ st.set_page_config(page_title="DECC Personal Financial Intelligence web app", la
 def main():
     # Title and Introduction
     st.title("Financial Intelligence web app")
-    st.markdown("""
     Welcome to your personal financial intelligence web app! This app is designed to help military personnel, students, and professionals living in Europe manage their finances effectively by:
     - Predicting upcoming withdrawals like rent, utilities, or subscriptions.
     - Providing alerts for deposits to maintain balances multiple accounts.
     - Identifying savings opportunities based on your international spending patterns.
+     """)
 
     # Sidebar for Navigation
     st.sidebar.header("Navigation")
