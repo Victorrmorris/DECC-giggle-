@@ -39,7 +39,30 @@ def main():
         - **Utilities:** Monthly payments for electricity, water, and internet. 
         """)
 
-        st.warning("Ensure you have sufficient funds in your USAA checking and local German account to cover these expenses since that is where they are automatically paid.")
+        # Visualize upcoming withdrawals
+    st.markdown("### My Bills (All Linked Accounts)")
+    col1, col2, col3 = st.columns(3)
+    col1.metric("Outstanding", "$0")
+    col2.metric("Due in next 7 days", "$3,372.15 (€3,233.86)")
+    col3.metric("Overdue", "$0")
+
+    st.markdown("#### Next payment on 1st June")
+    st.write("**Germany Rent Payment**: $1,800.00 Monthly")
+    st.write("**O2 · Internet**: $39.99 Monthly")
+    st.write("**REWAG · Utilities**: $30.00 Monthly")
+
+    st.markdown("[View more](#)")
+
+    st.warning("Ensure you have sufficient funds in your account to cover these expenses.")
+    st.subheader("Upcoming Withdrawals")
+    st.markdown("""
+    Stay on top of your recurring expenses! Here are some examples of upcoming withdrawals you might need to plan for:
+    - **Rent:** Due on the 1st of the month.
+    - **Tuition:** Semester-based payments.
+    - **Utilities:** Monthly payments for electricity, water, and internet.
+    """)
+
+    st.warning("Ensure you have sufficient funds in your USAA checking and local German account to cover these expenses since that is where they are automatically paid.")
 
     # Spending Analytics Section
     elif selected_section == "Spending Analytics":
