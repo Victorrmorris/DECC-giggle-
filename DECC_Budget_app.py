@@ -11,7 +11,6 @@ def main():
     - Predicting upcoming withdrawals like rent, utilities, or subscriptions.
     - Providing alerts for deposits to maintain balances multiple accounts.
     - Identifying savings opportunities based on your international spending patterns.
-    """)
 
     # Sidebar for Navigation
     st.sidebar.header("Navigation")
