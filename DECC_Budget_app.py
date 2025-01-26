@@ -65,7 +65,7 @@ def main():
         st.success("Tip: Use this section to identify where you can cut costs and save more annually.")
 
    # Budget Visualization Section
-elif selected_section == "Budget Visualization":
+    elif selected_section == "Budget Visualization":
     st.subheader("Germany and US Household Budgeting")
 
     # Budget data
@@ -92,7 +92,7 @@ elif selected_section == "Budget Visualization":
         st.progress(amount / total_budget)
 
 # Chatbot Insights Section
-elif selected_section == "Chatbot Insights":
+    elif selected_section == "Chatbot Insights":
     st.subheader("Chatbot Insights")
     st.markdown("""
     Ask our AI chatbot for personalized financial advice:
