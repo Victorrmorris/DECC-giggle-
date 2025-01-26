@@ -64,30 +64,44 @@ def main():
         """)
         st.success("Tip: Use this section to identify where you can cut costs and save more annually.")
 
-    # Personal Finance Insights Section
-    elif selected_section == "Personal Finance Insights":
-        st.subheader("Personal Finance Insights")
-        st.markdown("""
-        Get personalized financial advice:
-        - Help me create a budget for my house in the US and Germany.
-        - How much should I save for my move from Germany to Texas?
-        - What is the best way to budget for tuition not covered by my Post-9/11 GI Bill?
-        - How can I reduce my utility bills when deployed or away from home for over two weeks?
-        """)
+    # Budget Visualization Section
+elif selected_section == "Budget Visualization":
+    st.subheader("Germany and US Household Budgeting")
 
-        # Large chatbot UI
-        user_input = st.text_area("Type your question here:", height=200, placeholder="Ask about your finances, budgeting, or savings opportunities...")
-        if st.button("Get Insights"):
-            # Placeholder for chatbot integration: Replace this with API/model integration if available.
-            if user_input.strip():
-                st.write(f"AI Response for: '{user_input}'")  # Placeholder for chatbot response
-            else:
-                st.warning("Please enter a question to get insights.")
+    # Budget data
+    categories = ["Groceries", "Rent", "Entertainment", "Utilities", "Transportation"]
+    amounts = [1200, 2500, 600, 400, 300]  # Example spending amounts
+    total_budget = 6000  # Example total budget
 
-    # Footer
-    st.markdown("---")
-    st.markdown("For support or feedback, contact us at [https://www.defcomcap.com](https://www.defcomcap.com).")
-    st.markdown("© 2025 DECC | Personal Financial Intelligence.")
+    # Display total spending
+    total_spent = sum(amounts)
+    st.write(f"**Total Spent:** ${total_spent:,.2f}")
 
-if __name__ == "__main__":
-    main()
+    # Display individual category spending with progress bars
+    for category, amount in zip(categories, amounts):
+        st.write(f"{category}: ${amount:,.2f} spent out of ${total_budget}")
+        st.progress(amount / total_budget)
+
+# Chatbot Insights Section
+elif selected_section == "Chatbot Insights":
+    st.subheader("Chatbot Insights")
+    st.markdown("""
+    Ask our AI chatbot for personalized financial advice:
+    - How much should I save for my next move?
+    - What is the best way to budget for tuition?
+    - How can I reduce my utility bills?
+    """)
+
+    # Large chatbot UI
+    user_input = st.text_area("Type your question here:", height=200, placeholder="Ask about your finances, budgeting, or savings opportunities...")
+    if st.button("Get Insights"):
+        # Placeholder for chatbot integration: Replace this with API/model integration if available.
+        if user_input.strip():
+            st.write(f"AI Response for: '{user_input}'")  # Placeholder for chatbot response
+        else:
+            st.warning("Please enter a question to get insights.")
+
+# Footer
+st.markdown("---")
+st.markdown("For support or feedback, contact us at [support@budgetoptimizer.com](mailto:support@budgetoptimizer.com).")
+st.markdown("© 2025 Lifestyle Budget Optimizer | Your trusted financial companion.")
