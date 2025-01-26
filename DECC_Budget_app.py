@@ -65,7 +65,7 @@ def main():
         st.success("Tip: Use this section to identify where you can cut costs and save more annually.")
 
    # Budget Visualization Section
-elif selected_section == "Budget Visualization":
+    elif selected_section == "Budget Visualization":
     st.subheader("Germany and US Household Budgeting")
 
     # Budget data
