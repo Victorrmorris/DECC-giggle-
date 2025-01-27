@@ -88,9 +88,7 @@ def main():
         st.subheader("Chatbot Insights")
         st.markdown("""
         Ask our AI chatbot for personalized financial advice:
-        - How much should I save for my next move?
-        - What is the best way to budget for tuition?
-        - How can I reduce my utility bills?
+        - How much should I budget for my move from Germany to Texas?
         """)
 
         # Large chatbot UI
@@ -100,11 +98,11 @@ def main():
                 # Display the sample LLM response
                 st.write("### AI Financial Assistant Response:")
                 st.write("""
-                It looks like you’re in great financial shape for the move back to Texas! With **$25,580** in savings, you’ve got a solid cushion, though it’s a good idea to pay down **$1,020** on your credit cards to free up flexibility.
+                It looks like you’re in great financial shape for the move back to Texas! With $25,580 in savings, you’ve got a solid cushion, though it’s a good idea to pay down $1,020 on your credit cards to free up flexibility.
                 The military will cover key expenses like shipping household goods and flights, but you’ll need to budget for non-reimbursable costs like:
-                - **Pet transport:** $500–$4,000.
-                - **Vehicle shipment (if needed):** $1,000–$2,500.
-                - **Home setup expenses in Texas:** $2,500–$5,000 (for deposits, utilities, and furnishings).
+                - Pet transport: $500–$4,000.
+                - **Vehicle shipment (if needed): $1,000–$2,500.
+                - **Home setup expenses in Texas: $2,500–$5,000 (for deposits, utilities, and furnishings).
                 
                 Your current spending habits in Germany are well-organized, so you’ll want to adjust for Texas living, where vehicle, fuel, and utility costs might creep up. Reserving **$5,000–$8,000** as a buffer for the transition will help you settle in comfortably while keeping a safety net for unexpected costs.
                 
