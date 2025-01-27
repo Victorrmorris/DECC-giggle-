@@ -83,9 +83,9 @@ def main():
             st.write(f"{category}: ${amount:,.2f} spent out of ${total_budget}")
             st.progress(amount / total_budget)
 
-    # Chatbot Insights Section
-    elif selected_section == "Chatbot Insights":
-        st.subheader("Chatbot Insights")
+    # Financial Intelligence Section
+    elif selected_section == "Financial Intelligence Insights":
+        st.subheader("Financial Intelligence Insights")
         st.markdown("""
         Ask our AI chatbot for personalized financial advice:
         - How much should I budget for my upcoming move from Germany to Texas?
