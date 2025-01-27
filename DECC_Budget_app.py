@@ -17,7 +17,7 @@ def main():
     # Sidebar for Navigation
     st.sidebar.header("Navigation")
     st.sidebar.markdown("Select a section to explore:")
-    sections = ["Home", "Recurring Payments", "Spending Analytics", "Personal Finance Insights"]
+    sections = ["Home", "Recurring Payments", "Spending Analytics", "Budget Visualization", "Chatbot Insights"]
     selected_section = st.sidebar.radio("Go to:", sections, index=0)
 
     # Home Section
@@ -65,53 +65,46 @@ def main():
         """)
         st.success("Tip: Use this section to identify where you can cut costs and save more annually.")
 
-   # Budget Visualization Section
+    # Budget Visualization Section
     elif selected_section == "Budget Visualization":
         st.subheader("Germany and US Household Budgeting")
 
-    # Budget data
-    categories = ["Groceries", "Rent", "Entertainment", "Utilities", "Transportation"]
-    amounts = [1200, 2500, 600, 400, 300]  # Example spending amounts
-    total_budget = 6000  # Example total budget
+        # Budget data
+        categories = ["Groceries", "Rent", "Entertainment", "Utilities", "Transportation"]
+        amounts = [1200, 2500, 600, 400, 300]  # Example spending amounts
+        total_budget = 6000  # Example total budget
 
-    # Display total spending
-    total_spent = sum(amounts)
-    st.write(f"**Total Spent:** ${total_spent:,.2f}")
+        # Display total spending
+        total_spent = sum(amounts)
+        st.write(f"**Total Spent:** ${total_spent:,.2f}")
 
-    # Display individual category spending with progress bars
-    for category, amount in zip(categories, amounts):
-        st.write(f"{category}: ${amount:,.2f} spent out of ${total_budget}")
-        st.progress(amount / total_budget)
+        # Display individual category spending with progress bars
+        for category, amount in zip(categories, amounts):
+            st.write(f"{category}: ${amount:,.2f} spent out of ${total_budget}")
+            st.progress(amount / total_budget)
 
-    # Display total spending
-    total_spent = sum(amounts)
-    st.write(f"**Total Spent:** ${total_spent:,.2f}")
+    # Chatbot Insights Section
+    elif selected_section == "Chatbot Insights":
+        st.subheader("Chatbot Insights")
+        st.markdown("""
+        Ask our AI chatbot for personalized financial advice:
+        - How much should I save for my next move?
+        - What is the best way to budget for tuition?
+        - How can I reduce my utility bills?
+        """)
 
-    # Display individual category spending with progress bars
-    for category, amount in zip(categories, amounts):
-        st.write(f"{category}: ${amount:,.2f} spent out of ${total_budget}")
-        st.progress(amount / total_budget)
+        # Large chatbot UI
+        user_input = st.text_area("Type your question here:", height=200, placeholder="Ask about your finances, budgeting, or savings opportunities...")
+        if st.button("Get Insights"):
+            if user_input.strip():
+                st.write(f"AI Response for: '{user_input}'")  # Placeholder for chatbot response
+            else:
+                st.warning("Please enter a question to get insights.")
 
-# Chatbot Insights Section
-elif selected_section == "Chatbot Insights":
-    st.subheader("Chatbot Insights")
-    st.markdown("""
-    Ask our AI chatbot for personalized financial advice:
-    - How much should I save for my next move?
-    - What is the best way to budget for tuition?
-    - How can I reduce my utility bills?
-    """)
+    # Footer
+    st.markdown("---")
+    st.markdown("For support or feedback, contact us at [support@budgetoptimizer.com](mailto:support@budgetoptimizer.com).")
+    st.markdown("© 2025 Lifestyle Budget Optimizer | Your trusted financial companion.")
 
-    # Large chatbot UI
-    user_input = st.text_area("Type your question here:", height=200, placeholder="Ask about your finances, budgeting, or savings opportunities...")
-    if st.button("Get Insights"):
-        # Placeholder for chatbot integration: Replace this with API/model integration if available.
-        if user_input.strip():
-            st.write(f"AI Response for: '{user_input}'")  # Placeholder for chatbot response
-        else:
-            st.warning("Please enter a question to get insights.")
-
-# Footer
-st.markdown("---")
-st.markdown("For support or feedback, contact us at [support@budgetoptimizer.com](mailto:support@budgetoptimizer.com).")
-st.markdown("© 2025 Lifestyle Budget Optimizer | Your trusted financial companion.")
+if __name__ == "__main__":
+    main()
