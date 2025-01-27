@@ -83,8 +83,8 @@ def main():
             st.write(f"{category}: ${amount:,.2f} spent out of ${total_budget}")
             st.progress(amount / total_budget)
 
-    # Insights Section
-    elif selected_section == "Personal Finance Insights":
+    # Chatbot Insights Section
+    elif selected_section == "Chatbot Insights":
         st.subheader("Chatbot Insights")
         st.markdown("""
         Ask our AI chatbot for personalized financial advice:
@@ -95,6 +95,7 @@ def main():
         user_input = st.text_area(
             "Type your question here:", 
             height=200, 
+            placeholder="How much should I budget for my move from Germany to Texas?"
         )
         if st.button("Get Insights"):
             if user_input.strip():
