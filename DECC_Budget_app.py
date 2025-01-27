@@ -93,7 +93,7 @@ def main():
         st.progress(amount / total_budget)
 
 # Chatbot Insights Section
-        elif selected_section == "Chatbot Insights":
+elif selected_section == "Chatbot Insights":
     st.subheader("Chatbot Insights")
     st.markdown("""
     Ask our AI chatbot for personalized financial advice:
