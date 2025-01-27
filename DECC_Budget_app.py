@@ -88,16 +88,13 @@ def main():
         st.subheader("Chatbot Insights")
         st.markdown("""
         Ask our AI chatbot for personalized financial advice:
-        - How much should I save for my next move?
-        - What is the best way to budget for tuition?
-        - How can I reduce my utility bills?
+        - How much should I budget for my upcoming move from Germany to Texas?
         """)
 
         # Large chatbot UI
         user_input = st.text_area(
             "Type your question here:", 
             height=200, 
-            placeholder="How much should I budget for my move from Germany to Texas?"
         )
         if st.button("Get Insights"):
             if user_input.strip():
