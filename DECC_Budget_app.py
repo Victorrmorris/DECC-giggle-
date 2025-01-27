@@ -118,8 +118,8 @@ def main():
 
 # Footer
 st.markdown("---")
-st.markdown("For support or feedback, contact us at [support@budgetoptimizer.com](mailto:support@budgetoptimizer.com).")
-st.markdown("© 2025 Lifestyle Budget Optimizer | Your trusted financial companion.")
+st.markdown("For support or feedback, contact us at [https://www.defcomcap.com](mailto:https://www.defcomcap.com).")
+st.markdown("© 2025 DECC | Personal financial intelligence.")
 
 if __name__ == "__main__":
     main()
