@@ -98,7 +98,7 @@ if st.button("Get Insights"):
         # Display the sample LLM response
         st.write("### AI Financial Assistant Response:")
         st.markdown("""
-        It looks like you’re in great financial shape for the move back to Texas! With **$25,580 in savings, you’ve got a solid cushion, though it’s a good idea to pay down **$1,020** on your credit cards to free up flexibility. 
+        It looks like you’re in great financial shape for the move back to Texas! With $25,580 in savings, you’ve got a solid cushion, though it’s a good idea to pay down **$1,020** on your credit cards to free up flexibility. 
         The military will cover key expenses like shipping household goods and flights, but you’ll need to budget for non-reimbursable costs like:
 
         - **Pet transport:** $500–$4,000
