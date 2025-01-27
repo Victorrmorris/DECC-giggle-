@@ -83,12 +83,12 @@ def main():
             st.write(f"{category}: ${amount:,.2f} spent out of ${total_budget}")
             st.progress(amount / total_budget)
 
-    # Financial Intelligence Section
-    elif selected_section == "Financial Intelligence Insights":
-        st.subheader("Financial Intelligence Insights")
+    # Insights Section
+    elif selected_section == "Personal Finance Insights":
+        st.subheader("Chatbot Insights")
         st.markdown("""
         Ask our AI chatbot for personalized financial advice:
-        - How much should I budget for my upcoming move from Germany to Texas?
+        - How much should I save for my upcoming move from Germany to Texas?
         """)
 
         # Large chatbot UI
@@ -101,7 +101,7 @@ def main():
                 # Display the sample LLM response
                 st.write("### AI Financial Assistant Response:")
                 st.markdown("""
-                It looks like you’re in great financial shape for the move back to Texas! With your AMEX savings, you’ve got a solid cushion, though it’s a good idea to pay down your USAA credit card to free up flexibility. 
+                It looks like you’re in great financial shape for the move back to Texas! With your savings, you’ve got a solid cushion, though it’s a good idea to pay down your USAA credit card to free up flexibility. 
                 The military will cover key expenses like shipping household goods and flights, but you’ll need to budget for non-reimbursable costs like:
 
                 - **Pet transport:** $500–$4,000
